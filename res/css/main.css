@@ -1,26 +1,30 @@
 * {
-    color: #6d9eb0;
-    box-sizing: border-box;
     font-family: Calibri, sans-serif;
 }
 
+html, body {
+    height: 100%; /*Body takes up the whole height of the viewport*/
+}
+
+p {
+    color:#34495e;
+}
+
 header {
+    background-color: #a0818e;
+    border-radius: 12px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    background-color: #94a09b6f;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    position: sticky;
-    top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10; /*Header stays above every element*/
 }
 
 body {
     margin: 0;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     gap: 1em;
 }
 
@@ -30,21 +34,32 @@ a {
 }
 
 .logo {
-    margin: 0;
-    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .nav {
-    margin-top: 5px;
+    display: flex;
+    align-items: center; 
+    margin: 0; /*Resets default margins*/
+    margin-left: 20px;
+    padding: 0;
+}
+
+.nav p {
+    color:#000000;
 }
 
 .nav a {
-    padding: 10px 15px;
+    padding: 15px;
     text-transform: uppercase;
-    text-align: center;
-    display: block;
     color: #34495e;
-    font-size: .99em;
+    font-size: 1em;
 }
 
 .nav a:hover {
@@ -52,52 +67,85 @@ a {
     color: #f0f0f0;
 }
 
-@media (min-width: 800px) {
-    .header,
-    .nav {
-        display: flex;
-    }
-    .header {
-        flex-direction: row;
-        align-items: center;
-    }
-}
 
-header ul {
+header ul { /*Descendant selector*/
     list-style-type: none;
 }
 
-aside {
-    background-color: #94a09b6f;
-}
 
-footer {
-    background-color: #94a09b6f;
+section + footer{ /*Adjacent sibling selector: footer after a section, in this case the page footer. Makes sure the post footer isn't affected by this*/
+    background-color: #a0818e;
+    display: flex;
+    justify-content: center;
 }
 
 .content {
     display: flex;
     flex-direction: row;
-    flex: 1;
+    overflow: hidden; /* posts area and bars go under the footer and header to apply scrolling*/ 
+    gap: 40px; /*Gap between the bars and posts area*/
 }
 
-.leftBar {
-    width: 10%;
-    position: sticky;
-    left: 0;
+.leftBar, .rightBar {
+    background-color: #a0818e;
+    width: 20%;
+    border-radius: 12px;
 }
 
-.rightBar {
-    width: 10%;
-    position: sticky;
-    right: 0;
-}
+
 
 .postsArea {
     flex: 1;
+    overflow-y: auto; /*Allows scrolling only in the posts area so the header and bars are always in place*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /*Gap between posts*/
+    padding-right: 8px; /* So the scrollbar isn't too close to the posts*/
 }
 
-header, footer, aside, .postsArea {
-    border-radius: 8px;
-    overflow: hidden;
+.post {
+    background-color: #d6c3cb;
+    border-radius: 12px;
+    padding: 15px;
+    flex-direction: column;
+
 }
+
+.post-header {
+    background-color: #d6c3cb;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #34495e;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.post-footer img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+article > p {
+    font-size: 1.5em;
+    margin: 2px 0;
+}
+
+@media (max-width: 800px) {
+    .leftBar, .rightBar {
+        width: 10%;
+    }
+}
+
