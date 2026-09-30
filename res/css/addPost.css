@@ -1,0 +1,95 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    /*
+       CSS comment
+       The box-sizing CSS property sets how the total width and height of an element are calculated. 
+       If you set box-sizing: border-box; on an element, padding, and border are included in the width and height:
+    */
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.header {
+    padding: .5em;
+    margin-bottom: 25%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > .home_link {
+    padding: .5em;
+    text-decoration: none;
+}
+
+.header > .home_link:hover {
+    background-color: white;
+}
+
+.header > img {
+    width: 3em;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap; /* flex-wrap: wrap is necessary for align-content to work */
+    align-content: center;
+    padding: 1em;
+}
+
+.add_post_form {
+    width: fit-content;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap; /* flex-wrap: wrap is necessary for align-content to work */
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 1em;
+}
+
+.post_body_text_label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.post_body_file_label {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.post_body_file_label > input {
+    background-color: gray;
+    /* ask */
+}
+
+.post_body_file_label > input::file-selector-button {
+    background-color: green;
+}
+
+.create_post_button {
+    width: fit-content;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: .5em;
+    text-decoration: none;
+}
