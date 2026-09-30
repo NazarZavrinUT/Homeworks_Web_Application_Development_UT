@@ -1,0 +1,212 @@
+* {
+    font-family: Calibri, sans-serif;
+}
+
+html, body {
+    height: 100%; /*Body takes up the whole height of the viewport*/
+}
+
+p {
+    color:#34495e;
+}
+
+header {
+    background-color: #a0818e;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10; /*Header stays above every element*/
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: #6d9eb0;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav {
+    display: flex;
+    align-items: center; 
+    margin: 0; /*Resets default margins*/
+    margin-left: 20px;
+    padding: 0;
+}
+
+.nav p {
+    color:#000000;
+}
+
+.nav a {
+    padding: 15px;
+    text-transform: uppercase;
+    color: #34495e;
+    font-size: 1em;
+}
+
+.nav a:hover { /*Pseudo class*/
+    background-color: #6d9eb0;
+    color: #f0f0f0;
+    border-radius: 12px;
+}
+
+
+header ul { /*Descendant selector*/
+    list-style-type: none;
+}
+
+
+section + footer{ /*Adjacent sibling selector: footer after a section, in this case the page footer. Makes sure the post footer isn't affected by this*/
+    background-color: #a0818e;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* posts area and bars go under the footer and header to apply scrolling*/ 
+    gap: 40px; /*Gap between the bars and posts area*/
+}
+
+.leftBar, .rightBar {
+    background-color: #a0818e;
+    width: 20%;
+    border-radius: 12px;
+}
+
+.leftBar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /*Gap between friends*/
+    padding: 10px;
+
+}
+
+.leftBar .friend {
+    display: flex;
+    align-items: center;
+    gap: 10px; /*Gap between avatar and name*/
+}
+
+.leftBar .friend-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.leftBar .friend-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.leftBar h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.postsArea {
+    flex: 1; /*Fills the entire width of the page*/
+    overflow-y: auto; /*Allows scrolling only in the posts area so the header and bars are always in place*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /*Gap between posts*/
+    padding-right: 8px; /* So the scrollbar isn't too close to the posts*/
+}
+
+.post {
+    background-color: #d6c3cb;
+    border-radius: 12px;
+    padding: 15px;
+    flex-direction: column;
+
+}
+
+.post-header {
+    background-color: #d6c3cb;
+}
+
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-body {
+    padding: 10px ;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: #34495e;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.post-footer img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+article > p {
+    font-size: 1.5em;
+    margin: 2px 0;
+}
+
+@media (max-width: 900px) {
+    .leftBar, .rightBar {
+        width: 10%;
+        min-width: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .leftBar .friend-name {
+        display: none;
+        
+    }
+
+    .leftBar .friend {
+        justify-content: center;
+    }
+
+    .leftBar h2 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    .leftBar, .rightBar {
+        display: none;
+    }
+
+}
+
+
+
+
+
