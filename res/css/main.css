@@ -36,7 +36,6 @@ body {
 
 a {
     text-decoration: none;
-    color: #6d9eb0;
 }
 
 .logo {
@@ -85,6 +84,7 @@ section + footer{ /*Adjacent sibling selector: footer after a section, in this c
     display: flex;
     justify-content: center;
     font-weight: bold;
+    border-radius: 12px;
 }
 
 .content {
