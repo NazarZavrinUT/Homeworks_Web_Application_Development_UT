@@ -9,23 +9,26 @@
 </head>
 <body>
  <header>
-    <span>Home</span>
-    <img src="res/profile-icon.jpg" alt="Profile icon">
+     <nav>
+        <a href="index.html">HOME</a>
+        
+    </nav>
+    <img src="res/images/profile-icon.jpg" alt="Profile icon">
 </header>
 <main>
-    <div class="login-box">
+    <section class="login-box">
         <p class="welcome">Welcome to PostIt</p>
         <p class="link">Create an account</p>
         <p>or</p>
         <p>Please log in</p>
         <form action="index.html">
-            <input type="email" name="email" placeholder="Email", required oninvalid="this.setCustomValidity('Please fill all the fields')">
-            <input type="password" name="password" placeholder="Password" required oninvalid="this.setCustomValidity('Please fill all the fields')">
+            <input type="email" name="email" placeholder="Email" required oninvalid="this.setCustomValidity('Please fill all the fields')" oninput="this.setCustomValidity('')">
+            <input type="password" name="password" placeholder="Password" required oninvalid="this.setCustomValidity('Please fill all the fields')" oninput="this.setCustomValidity('')">
 
             <button type="submit">Log in</button>
         </form>
         <p class="link">Forget password</p>
-    </div>
+    </section>
 </main>
 </body>
 </html>
