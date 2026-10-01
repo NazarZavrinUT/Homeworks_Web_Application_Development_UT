@@ -9,31 +9,46 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
+    padding: 15px 30px;
+    font-family: 'Calibri';
     height: 100%;
+    background: linear-gradient(
+        135deg,
+        #f4e6c5 0%,
+        #d9e2c7 65%,
+        #aab89a 100%);
 }
 
 .header {
     padding: .5em;
-    margin-bottom: 25%;
-    background-color: lightgray;
+    background-color: #899b7a;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-radius: 12px;
+    font-weight: bold;
 }
 
 .header > .home_link {
     padding: .5em;
     text-decoration: none;
+    color: #34495e;
+    margin-left: 10px;
+
 }
 
 .header > .home_link:hover {
-    background-color: white;
+    background-color: #aab89a;
+    border-radius: 12px;
 }
 
 .header > img {
     width: 3em;
+    border-radius: 50%;
 }
 
 main {
@@ -42,7 +57,8 @@ main {
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap; /* flex-wrap: wrap is necessary for align-content to work */
-    align-content: center;
+    align-items: center;
+    flex: 1;
     padding: 1em;
 }
 
@@ -54,11 +70,11 @@ main {
     justify-content: space-between;
     flex-wrap: wrap; /* flex-wrap: wrap is necessary for align-content to work */
     align-items: center;
-    background-color: lightgray;
+    background-color: #a9b89d;
     border-radius: 1em;
 }
 
-.post_body_text_label {
+.post_body_text_label, .post_body_file_label {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -67,27 +83,23 @@ main {
     margin-bottom: 1em;
 }
 
-.post_body_file_label {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1em;
+.post_body_text_label > textarea {
+    border: 1px solid #899b7a;
+    font-size: 16px;
 }
 
 .post_body_file_label > input {
-    background-color: gray;
+    background-color: #899b7a;
     /* ask */
 }
 
 .post_body_file_label > input::file-selector-button {
-    background-color: green;
+    background-color: #536747;
 }
 
 .create_post_button {
     width: fit-content;
-    background-color: royalblue;
+    background-color: #536747;
     color: white;
     border: none;
     padding: .5em;
