@@ -86,15 +86,27 @@ main {
 .post_body_text_label > textarea {
     border: 1px solid #899b7a;
     font-size: 16px;
+    margin-left: 1em;
 }
 
-.post_body_file_label > input {
+/*.post_body_file_label > input {
     background-color: #899b7a;
-    /* ask */
 }
 
 .post_body_file_label > input::file-selector-button {
     background-color: #536747;
+}*/
+
+/* "Choose File" button styling */
+/* input[type="file"]::file-selector-button { */
+
+.post_body_file_label > label {
+  background: #899b7a;
+  color: #fff;
+  border: 1px solid #536747;
+  padding: 6px 14px;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .create_post_button {
