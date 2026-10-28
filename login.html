@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="res/images/minitab.png">
+    <script src="src/js/script.js" defer></script>
     <link rel="stylesheet" href="res/css/login.css">
     <title>Login</title>
 </head>
@@ -13,11 +14,21 @@
         <a href="index.html">HOME</a>
         
     </nav>
-    <img src="res/images/profile-icon.jpg" alt="Profile icon">
+    <nav class="profile" aria-label="User menu">
+        <button class="profile-button" id="profileButton" type="button">
+            <img src="res/images/profile-icon.jpg" alt="My picture">
+        </button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <p>John Doe</p>
+            <p>john.doe@ut.ee</p>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
 </header>
 <main>
     <section class="login-box">
-        <p class="welcome">Welcome to PostIt</p>
+        <h1 class="welcome">Welcome to PostIt</h1>
         <p class="link">Create an account</p>
         <p>or</p>
         <p>Please log in</p>

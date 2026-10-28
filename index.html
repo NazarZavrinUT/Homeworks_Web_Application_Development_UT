@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="res/images/minitab.png">
-    <script type="text/javascript" src="src/js/script.js"></script>
+    <script src="src/js/script.js" defer></script>
     <link rel="stylesheet" href="res/css/main.css">
     <title>Home</title>
 </head>
@@ -15,7 +15,17 @@
             <li><p>|</p></li>
             <li><a href="addPost.html">addPost</a></li>
         </ul>
-        <a class="logo" href="#"><img src="res/images/profile-icon.jpg" width="50" height="50" alt="My picture"></a>
+    <nav class="profile" aria-label="User menu">
+        <button class="profile-button" id="profileButton" type="button">
+            <img src="res/images/profile-icon.jpg" alt="My picture">
+        </button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <p>John Doe</p>
+            <p>john.doe@ut.ee</p>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
     </header>
 
     <section class="content">

@@ -82,7 +82,7 @@ fetch('https://api.npoint.io/59c2824d39c1810536df')
 
     */
     // Local fetching
-    
+    if (document.querySelector('.postsArea')) {
     fetch('res/json/posts.json')
     .then((response) => response.json())
     .then(json => {
@@ -159,4 +159,12 @@ fetch('https://api.npoint.io/59c2824d39c1810536df')
 
         document.querySelector('.postsArea').appendChild(errorArticle);
     })
-    
+}
+    document.addEventListener("DOMContentLoaded", function() {
+    const profileButton = document.getElementById("profileButton");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+
+    profileButton.addEventListener("click", function() {
+        dropdownMenu.classList.toggle("show");
+    });
+});

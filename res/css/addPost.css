@@ -1,5 +1,5 @@
 * {
-    font-family: sans-serif;
+    font-family:  'Calibri',  sans-serif;
     box-sizing: border-box;
     /*
        CSS comment
@@ -12,9 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 15px 30px;
+    padding: 10px;
     font-family: 'Calibri';
-    height: 100%;
+    min-height: 100vh;
     background: linear-gradient(
         135deg,
         #f4e6c5 0%,
@@ -23,48 +23,55 @@ body {
 }
 
 .header {
-    padding: .5em;
+    height: 60px;
     background-color: #899b7a;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 20px;
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .header > .home_link {
-    padding: .5em;
     text-decoration: none;
-    color: #34495e;
-    margin-left: 10px;
+    color:#34495e;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+
 
 }
 
 .header > .home_link:hover {
     background-color: #aab89a;
-    border-radius: 12px;
+    color: #000000;
+    border-radius: 6px;
 }
 
-.header > img {
+/*.header > img {
     width: 3em;
     border-radius: 50%;
 }
-
+*/
 main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap; /* flex-wrap: wrap is necessary for align-content to work */
     align-items: center;
     flex: 1;
     padding: 1em;
+    padding-top: 50px;
 }
 
 .add_post_form {
-    width: fit-content;
-    padding: 1.5em;
+    width: 350px;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -87,6 +94,9 @@ main {
     border: 1px solid #899b7a;
     font-size: 16px;
     margin-left: 1em;
+    width: 200px;
+    height: 50px;
+    resize: vertical;
 }
 
 /*.post_body_file_label > input {
@@ -103,17 +113,87 @@ main {
 .post_body_file_label > label {
   background: #899b7a;
   color: #fff;
+  border-radius: 5px;
   border: 1px solid #536747;
   padding: 6px 14px;
   font-family: inherit;
   cursor: pointer;
+  margin-right: 40px
 }
 
 .create_post_button {
     width: fit-content;
     background-color: #536747;
+
+    border-radius: 5px;
     color: white;
     border: none;
     padding: .5em;
     text-decoration: none;
+}
+.profile {
+    position: relative;
+    
+}
+
+.profile-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.profile-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: #eaf0df;
+    padding: 12px;
+    border-radius: 5px;
+    min-width: 150px;
+    z-index: 100;
+    border:1px solid #536747;
+    
+}
+
+.dropdown-menu p {
+    margin: 5px 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Posts scrollbar */
+.postsArea::-webkit-scrollbar {
+    width: 10px;
+}
+
+.postsArea::-webkit-scrollbar-track {
+    background-color: #edf0e9;
+    border-radius: 10px;
+}
+
+.postsArea::-webkit-scrollbar-thumb {
+    background-color: #899b7a;
+    border-radius: 10px;
+}
+
+.postsArea::-webkit-scrollbar-thumb:hover {
+    background-color: #536747;
 }
