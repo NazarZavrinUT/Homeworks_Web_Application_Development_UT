@@ -133,6 +133,7 @@ button {
     min-width: 150px;
     z-index: 100;
     border:1px solid #536747;
+    font-size: 16px;
     
 }
 
