@@ -81,7 +81,11 @@ header ul { /*Descendant selector*/
     list-style-type: none;
 }
 
-
+header nav a:hover { 
+    background-color: #aab89a;
+    color: #000000;
+    border-radius: 6px;
+}
 section + footer{ /*Adjacent sibling selector: footer after a section, in this case the page footer. Makes sure the post footer isn't affected by this*/
     background-color: #899b7a;
     display: flex;
@@ -254,6 +258,7 @@ article > p {
     min-width: 150px;
     z-index: 100;
     border:1px solid #536747;
+    font-weight: normal;
     
 }
 

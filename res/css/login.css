@@ -8,7 +8,7 @@ header{
     padding: 0 10px 0 20px;
     margin-top: 10px;
 }
-header nav a {
+header > nav:first-child > a {
     text-decoration: none;
     color:#34495e;
     padding: 15px;
