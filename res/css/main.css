@@ -98,9 +98,7 @@ section + footer{ /*Adjacent sibling selector: footer after a section, in this c
     display: flex;
     flex-direction: row;
     overflow: hidden; /* posts area and bars go under the footer and header to apply scrolling*/ 
-    gap: 20px; /*Gap between the bars and posts area*/
-    
-    
+    gap: 20px; /*Gap between the bars and posts area*/    
 }
 
 .leftBar, .rightBar {
@@ -114,7 +112,6 @@ section + footer{ /*Adjacent sibling selector: footer after a section, in this c
     flex-direction: column;
     gap: 10px; /*Gap between friends*/
     padding: 10px;
-
 }
 
 .leftBar .friend {
@@ -154,7 +151,6 @@ section + footer{ /*Adjacent sibling selector: footer after a section, in this c
     border-radius: 12px;
     padding: 15px;
     flex-direction: column;
-
 }
 
 .postError {
@@ -260,7 +256,6 @@ article > p {
     border:1px solid #536747;
     font-weight: normal;
     font-size: 16px;
-    
 }
 
 .dropdown-menu p {
@@ -296,5 +291,3 @@ article > p {
 .postsArea::-webkit-scrollbar-thumb:hover {
     background-color: #536747;
 }
-
-

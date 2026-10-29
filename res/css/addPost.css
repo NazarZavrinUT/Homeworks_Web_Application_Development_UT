@@ -42,8 +42,6 @@ body {
     border-radius: 6px;
     font-size: 20px;
     font-weight: bold;
-
-
 }
 
 .header > .home_link:hover {
@@ -128,7 +126,6 @@ main {
 .create_post_button {
     width: fit-content;
     background-color: #536747;
-
     border-radius: 5px;
     color: white;
     border: none;
@@ -137,7 +134,6 @@ main {
 }
 .profile {
     position: relative;
-    
 }
 
 .profile-button {
@@ -167,7 +163,6 @@ main {
     border:1px solid #536747;
     font-weight: normal;
     font-size: 16px;
-    
 }
 
 .dropdown-menu p {

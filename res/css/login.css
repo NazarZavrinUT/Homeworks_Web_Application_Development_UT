@@ -33,7 +33,6 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 30px;
-     
 }
 body {
     margin: 0;
@@ -45,14 +44,12 @@ body {
         #f4e6c5 0%,
         #d9e2c7 65%,
         #aab89a 100%);
-
 }
 
 .login-box {
     width: 280px;
     background-color: #a9b89d;
     border-radius: 12px;
-
     text-align: center;
     padding: 25px;
     box-shadow: 0 6px 18px rgba(60, 75, 50, 0.18);
@@ -87,8 +84,6 @@ input {
     width: 180px;
     padding: 8px;
     margin: 4px;
-
-    
     background-color: #fffdf7;
     border: 1px solid #899b7a;
     font-size: 16px;
@@ -151,5 +146,3 @@ button {
 .dropdown-menu.show {
     display: block;
 }
-
-
